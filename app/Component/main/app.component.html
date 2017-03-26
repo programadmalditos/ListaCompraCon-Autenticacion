@@ -1,0 +1,24 @@
+<modal #modal>
+    <modal-header [show-close]="true">
+        <h4 class="modal-title">Nuevo Producto</h4>
+    </modal-header>
+    <modal-body>
+        <formulario-producto (onsubmit)="guardar($event)" [model]="producto"></formulario-producto>
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modal.dismiss()">Cerrar</button>
+    </modal-footer>
+</modal>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"><button type="button" class="btn btn-primary" (click)="addProducto()">
+                <i class="glyphicon glyphicon-plus-sign">
+                </i></button> Productos a comprar</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-12">
+            <listado-productos [productos]="productos" (borrado)='onBorrar($event)' (modificado)='onModificar($event)'></listado-productos>
+        </div>
+    </div>
+</div>

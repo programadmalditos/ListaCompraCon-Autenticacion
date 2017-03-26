@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/">
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="jumbotron col-md-10 col-md-offset-1">
+        <div class="container">
+            <h1>Tu lista de la compra</h1>
+            <p>
+                <app>Cargando ...</app>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
